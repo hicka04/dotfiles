@@ -11,7 +11,7 @@
 # History
 #
 
-HISTFILE=${XDG_CACHE_HOME}/zsh/history
+HISTFILE=${XDG_STATE_HOME}/zsh/history
 
 # Remove older command from the history if a duplicate is to be added.
 setopt HIST_IGNORE_ALL_DUPS
