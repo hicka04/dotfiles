@@ -8,3 +8,10 @@
         unstage = reset HEAD
         get = !ghq get
         sw = switch
+[core]
+        autocrlf = input
+        quotepath = false
+[init]
+        defaultBranch = main
+[push]
+        default = current
