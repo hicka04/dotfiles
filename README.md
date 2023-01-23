@@ -20,3 +20,8 @@ vim ~/.zshenv
 
 DOTFILES_HOME=$HOME/ghq/github.com/hicka04/dotfiles
 ```
+
+## Configure karabiner
+```
+ln -s $XDG_CONFIG_HOME/karabiner ~/.config/karabiner
+```
