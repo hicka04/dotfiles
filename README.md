@@ -25,3 +25,12 @@ DOTFILES_HOME=$HOME/ghq/github.com/hicka04/dotfiles
 ```
 ln -s $XDG_CONFIG_HOME/karabiner ~/.config/karabiner
 ```
+
+## Install commands and apps
+### Install homebrew
+See https://brew.sh/
+
+### Install by Brewfile
+```
+brew bundle
+```
