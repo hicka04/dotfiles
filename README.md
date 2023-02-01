@@ -10,7 +10,7 @@ brew install ghq
 ghq get git@github.com:hicka04/dotfiles.git
 ```
 
-## Configure .zshenv
+## Configure zsh
 ```
 cp ~/ghq/github.com/hicka04/dotfiles/.zshenv.example ~/.zshenv
 ```
@@ -19,6 +19,10 @@ cp ~/ghq/github.com/hicka04/dotfiles/.zshenv.example ~/.zshenv
 vim ~/.zshenv
 
 DOTFILES_HOME=$HOME/ghq/github.com/hicka04/dotfiles
+```
+
+```
+touch $HISTFILE
 ```
 
 ## Configure karabiner
