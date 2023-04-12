@@ -38,3 +38,10 @@ See https://brew.sh/
 ```
 brew bundle
 ```
+
+## Configure Xcode
+### Color theme
+```
+mkdir -p ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
+ln -s ~/ghq/github.com/hicka04/dotfiles/Xcode/Monokai.xccolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes/Monokai.xccolortheme
+``` 
