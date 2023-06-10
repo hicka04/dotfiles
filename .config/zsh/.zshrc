@@ -144,3 +144,7 @@ zle -N ghq-fzf
 bindkey "^g" ghq-fzf
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# chxcode
+source /opt/homebrew/opt/chxcode/share/chxcode/chxcode
+source /opt/homebrew/opt/chxcode/share/chxcode/auto
