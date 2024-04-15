@@ -8,6 +8,7 @@
         unstage = reset HEAD
         get = !ghq get
         sw = switch
+	delete-merged-branch = !git branch --merged | egrep -v '\\*|main|master' | xargs git branch -d
 [core]
         autocrlf = input
         quotepath = false
