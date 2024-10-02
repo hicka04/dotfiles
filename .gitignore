@@ -1,3 +1,4 @@
 .idea
 .config/.android
 .config/jgit
+.config/zsh/.zsh_sessions
