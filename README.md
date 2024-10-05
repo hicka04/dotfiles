@@ -40,7 +40,7 @@ DOTFILES_HOME=$HOME/ghq/github.com/hicka04/dotfiles
 ```
 
 ```
-touch $HISTFILE
+mkdir -p $(dirname $HISTFILE) && touch $HISTFILE
 ```
 
 ## Configure karabiner
