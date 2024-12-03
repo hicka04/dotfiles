@@ -2,3 +2,5 @@
 .config/.android
 .config/jgit
 .config/zsh/.zsh_sessions
+.config/gh
+.config/swiftpm
