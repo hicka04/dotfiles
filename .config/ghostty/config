@@ -1,0 +1,7 @@
+theme = Monokai Soda
+font-family = MyricaM M
+font-size = 16
+background-opacity = 0.8
+window-height = 55
+window-width = 160
+confirm-close-surface = false
