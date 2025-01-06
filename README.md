@@ -30,11 +30,12 @@ git config --global user.email hicka04@gmail.com
 
 ## Configure zsh
 ```
-cp ~/ghq/github.com/hicka04/dotfiles/.zshenv.example ~/.zshenv
+touch /etc/zshenv
+cat ~/ghq/github.com/hicka04/dotfiles/.zshenv.example > /etc/zshenv
 ```
 
 ```
-vim ~/.zshenv
+vim /etc/zshenv
 
 DOTFILES_HOME=$HOME/ghq/github.com/hicka04/dotfiles
 ```
@@ -46,6 +47,11 @@ mkdir -p $(dirname $HISTFILE) && touch $HISTFILE
 ## Configure karabiner
 ```
 ln -s $XDG_CONFIG_HOME/karabiner ~/.config/karabiner
+```
+
+## Configure Ghostty
+```
+ln -s $XDG_CONFIG_HOME/ghostty ~/.config/ghostty
 ```
 
 ## Configure Xcode
