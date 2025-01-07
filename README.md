@@ -16,6 +16,22 @@ https://docs.github.com/ja/authentication/connecting-to-github-with-ssh
 ghq get git@github.com:hicka04/dotfiles.git
 ```
 
+## Configure env
+```
+cp setenvs.plist $HOME/Library/LaunchAgents/dev.hicka04.setenvs.plist
+vim $HOME/Library/LaunchAgents/dev.hicka04.setenvs.plist # replace {username}
+launchctl load $HOME/Library/LaunchAgents/dev.hicka04.setenvs.plist
+```
+
+## Configure zsh
+```
+sudo ln -s $DOTFILES_HOME/zshenv /etc/zshenv
+```
+
+```
+mkdir -p $(dirname $HISTFILE) && touch $HISTFILE
+```
+
 ## Install commands and apps
 ```
 cd path/to/Brewfile
@@ -28,30 +44,9 @@ git config --global user.name hicka04
 git config --global user.email hicka04@gmail.com
 ```
 
-## Configure zsh
-```
-touch /etc/zshenv
-cat ~/ghq/github.com/hicka04/dotfiles/.zshenv.example > /etc/zshenv
-```
-
-```
-vim /etc/zshenv
-
-DOTFILES_HOME=$HOME/ghq/github.com/hicka04/dotfiles
-```
-
-```
-mkdir -p $(dirname $HISTFILE) && touch $HISTFILE
-```
-
 ## Configure karabiner
 ```
 ln -s $XDG_CONFIG_HOME/karabiner ~/.config/karabiner
-```
-
-## Configure Ghostty
-```
-ln -s $XDG_CONFIG_HOME/ghostty ~/.config/ghostty
 ```
 
 ## Configure Xcode

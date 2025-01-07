@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>dev.hicka04.setenvs</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>/bin/launchctl</string>
+      <string>setenv</string>
+      <string>DOTFILES_HOME</string>
+      <string>/Users/{username}/ghq/github.com/hicka04/dotfiles</string>
+      <string>XDG_CONFIG_HOME</string>
+      <string>/Users/{username}/ghq/github.com/hicka04/dotfiles/.config</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+  </dict>
+</plist>
