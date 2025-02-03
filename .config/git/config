@@ -5,6 +5,8 @@
         st = status
         br = branch
         cmm = commit -m
+        cma = commit --amend
+        cmf = commit --fixup
         unstage = reset HEAD
         get = !ghq get
         sw = switch
