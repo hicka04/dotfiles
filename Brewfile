@@ -1,4 +1,3 @@
-tap "homebrew/bundle"
 tap "klaaspieter/formula"
 tap "robotsandpencils/made"
 brew "aria2"
