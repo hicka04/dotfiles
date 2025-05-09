@@ -4,7 +4,7 @@ See https://brew.sh/
 
 ## Install ghq
 ```
-brew install ghq
+/opt/homebrew/bin/brew install ghq
 ```
 
 ## Clone
@@ -13,20 +13,25 @@ https://docs.github.com/ja/authentication/connecting-to-github-with-ssh
 
 ### Get
 ```
-ghq get git@github.com:hicka04/dotfiles.git
+/opt/homebrew/bin/ghq get git@github.com:hicka04/dotfiles.git
 ```
 
 ## Configure env
 ```
+mkdir -p $HOME/Library/LaunchAgents/
 cp setenvs.plist $HOME/Library/LaunchAgents/dev.hicka04.setenvs.plist
 vim $HOME/Library/LaunchAgents/dev.hicka04.setenvs.plist # replace {username}
 launchctl load $HOME/Library/LaunchAgents/dev.hicka04.setenvs.plist
 ```
 
+Reboot
+
 ## Configure zsh
 ```
 sudo ln -s $DOTFILES_HOME/zshenv /etc/zshenv
 ```
+
+Relaunch terminal
 
 ```
 mkdir -p $(dirname $HISTFILE) && touch $HISTFILE
@@ -34,7 +39,6 @@ mkdir -p $(dirname $HISTFILE) && touch $HISTFILE
 
 ## Install commands and apps
 ```
-cd path/to/Brewfile
 brew bundle
 ```
 
