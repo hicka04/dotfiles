@@ -5,3 +5,4 @@ background-opacity = 0.8
 window-height = 55
 window-width = 160
 confirm-close-surface = false
+keybind = shift+enter=text:\n
