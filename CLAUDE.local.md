@@ -1,11 +1,22 @@
 # Planning
 
-* Review the codebase and outline your approach.
-  * If anything is unclear, ask for clarification.
-* When performing the same work across multiple files, split the work into separate tasks for each file.
-* Do **not** start writing code at this stage.
+以下の順番に従って実行プランを立ててください
+
+* 依頼内容に関連するコードを読んで、現状の仕様を理解してください
+    * 不明点があれば、必要に応じて質問してください
+* 実装方法を検討してください
+    * 実装方法が複数ある場合は、それぞれのメリット/デメリットを提示して、どの選択肢を取るか質問してください
+        * このとき、提示された選択肢以外の方法を提案することがありますので、私の提案も含めて再度メリット/デメリットをまとめ直してください
+* 実装方法が決まったら、ステップを分割してタスクを作成してください
+    * 1つのステップで、複数のファイルに対して同じような操作をする場合は、それらを個別の小タスクとして分割してください
+
+これらが終わるまでは**実装を開始しないでください**
 
 # Coding
 
-* Commit your changes for each individual task.
+以下の手順に従って、立てた実行プランに沿った実装を行ってください
+
+* タスクごとに作業をしてください
+* 1つのタスクが終わる毎にcommitしてください
+    * コミット時の Co-authored には `Claude Code` が作業したことがわかるようにしてください
 
