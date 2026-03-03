@@ -55,7 +55,8 @@ if [ -n "$total_input" ] && [ -n "$total_output" ]; then
     total_tokens=$((total_input + total_output))
     formatted=$(format_tokens "$total_tokens")
     if [ -n "$total_cost" ]; then
-        token_info=" | ${GREEN}Tokens: ${formatted} (\$${total_cost})${RESET}"
+        formatted_cost=$(awk "BEGIN {printf \"%.2f\", $total_cost}")
+        token_info=" | ${GREEN}Tokens: ${formatted} (\$${formatted_cost})${RESET}"
     else
         token_info=" | ${GREEN}Tokens: ${formatted}${RESET}"
     fi
