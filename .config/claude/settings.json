@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "defaultMode": "plan"
+  },
+  "model": "opusplan",
+  "statusLine": {
+    "type": "command",
+    "command": "${CLAUDE_CONFIG_DIR}/statusline-command.sh"
+  },
+  "enabledPlugins": {
+    "swift-lsp@claude-plugins-official": true
+  },
+  "language": "japanese",
+  "advisorModel": "opus"
+}
