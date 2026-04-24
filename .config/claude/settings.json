@@ -1,6 +1,20 @@
 {
   "permissions": {
-    "defaultMode": "plan"
+    "defaultMode": "plan",
+    "allow": [
+      "Bash(gh pr:*)",
+      "Bash(gh repo view:*)",
+      "Bash(gh api:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git mv:*)",
+      "Bash(git log:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(cat:*)",
+      "Bash(wc:*)",
+      "WebFetch(domain:raw.githubusercontent.com)"
+    ]
   },
   "model": "opusplan",
   "statusLine": {
