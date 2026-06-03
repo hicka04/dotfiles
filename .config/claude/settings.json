@@ -25,5 +25,17 @@
     "swift-lsp@claude-plugins-official": true
   },
   "language": "japanese",
-  "advisorModel": "opus"
+  "advisorModel": "opus",
+  "hooks": {
+    "WorktreeCreate": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_CONFIG_DIR}/worktree-create.sh"
+          }
+        ]
+      }
+    ]
+  }
 }
