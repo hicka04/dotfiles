@@ -10,8 +10,36 @@ root=$(git -C "$cwd" rev-parse --show-toplevel)
 
 dir="$root/.claude/worktrees/$name"
 
-# origin/HEAD の実体を解決。なければローカル HEAD にフォールバック
-base_ref=$(git -C "$root" symbolic-ref --quiet refs/remotes/origin/HEAD 2>/dev/null || echo "HEAD")
+# 公式と同じ worktree.baseRef を settings.json から読む。
+# スコープの小さい順（Local > Project > User）に探索し、最初に見つかった値を採用。
+base_setting=""
+for settings_file in \
+  "$root/.claude/settings.local.json" \
+  "$root/.claude/settings.json" \
+  "${CLAUDE_CONFIG_DIR:-$HOME/.claude}/settings.json"; do
+  if [ -f "$settings_file" ]; then
+    value=$(jq -r '.worktree.baseRef // empty' "$settings_file" 2>/dev/null || true)
+    if [ -n "$value" ]; then
+      base_setting="$value"
+      break
+    fi
+  fi
+done
+
+# 値を base ref に変換（公式セマンティクスに一致）。
+# head: ローカル HEAD / fresh(既定): origin/HEAD、なければローカル HEAD にフォールバック。
+case "${base_setting:-fresh}" in
+  head)
+    base_ref="HEAD"
+    ;;
+  fresh)
+    base_ref=$(git -C "$root" symbolic-ref --quiet refs/remotes/origin/HEAD 2>/dev/null || echo "HEAD")
+    ;;
+  *)
+    echo "worktree.baseRef must be \"fresh\" or \"head\", got: \"$base_setting\"" >&2
+    exit 1
+    ;;
+esac
 
 # name に / が含まれる場合に備えて親ディレクトリを作成
 mkdir -p "$(dirname "$dir")"
