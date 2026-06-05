@@ -26,6 +26,9 @@
   },
   "language": "japanese",
   "advisorModel": "opus",
+  "worktree": {
+    "baseRef": "head"
+  },
   "hooks": {
     "WorktreeCreate": [
       {
