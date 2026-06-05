@@ -41,6 +41,12 @@ case "${base_setting:-fresh}" in
     ;;
 esac
 
+# 対応する worktree がすでに存在する場合はそのまま返す
+if git -C "$root" worktree list --porcelain | grep -qF "worktree $dir"; then
+  echo "$dir"
+  exit 0
+fi
+
 # name に / が含まれる場合に備えて親ディレクトリを作成
 mkdir -p "$(dirname "$dir")"
 
