@@ -58,4 +58,13 @@ else
   git -C "$root" worktree add -b "$name" "$dir" "$base_ref" >&2
 fi
 
+# .worktreeinclude にマッチする gitignored ファイルを worktree にコピー
+if [ -f "$root/.worktreeinclude" ]; then
+  git -C "$root" ls-files --ignored --others --exclude-from="$root/.worktreeinclude" | while IFS= read -r file; do
+    dest="$dir/$file"
+    mkdir -p "$(dirname "$dest")"
+    cp "$root/$file" "$dest"
+  done
+fi
+
 echo "$dir"
