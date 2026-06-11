@@ -5,3 +5,5 @@
 .config/gh
 .config/swiftpm
 .config/github-copilot
+
+.claude/settings.local.json
