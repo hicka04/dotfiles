@@ -52,9 +52,13 @@ mkdir -p "$(dirname "$dir")"
 
 # 作成ログは stderr へ。stdout には worktree パスのみ出力（hook の出力要件）
 if git -C "$root" show-ref --verify --quiet "refs/heads/$name"; then
-  # 既存ブランチをチェックアウト（base_ref は使わない）
+  # 既存のローカルブランチをチェックアウト（base_ref は使わない）
   git -C "$root" worktree add "$dir" "$name" >&2
+elif git -C "$root" show-ref --verify --quiet "refs/remotes/origin/$name"; then
+  # リモート追跡ブランチから origin/$name を追跡するローカルブランチを作成
+  git -C "$root" worktree add -b "$name" "$dir" "origin/$name" >&2
 else
+  # 新規ブランチを作成
   git -C "$root" worktree add -b "$name" "$dir" "$base_ref" >&2
 fi
 
