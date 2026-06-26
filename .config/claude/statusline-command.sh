@@ -64,5 +64,5 @@ else
     token_info=""
 fi
 
-# Output status line
-printf "%s%s%s%s | %s%s%s%s%s" "$CYAN" "$cwd_display" "$RESET" "$git_info" "$BLUE" "$model" "$RESET" "$context_info" "$token_info"
+# Output status line (2 lines: path / metrics)
+printf "%s%s%s%s\n%s%s%s%s%s" "$CYAN" "$cwd_display" "$RESET" "$git_info" "$BLUE" "$model" "$RESET" "$context_info" "$token_info"
