@@ -1,5 +1,8 @@
 [settings]
 idiomatic_version_file_enable_tools = ["ruby"]
 
+[settings.github]
+use_git_credentials = true
+
 [tools]
 node = "24"
