@@ -1,0 +1,5 @@
+{
+  "trustedformulae": [
+    "getsentry/xcodebuildmcp/xcodebuildmcp"
+  ]
+}
