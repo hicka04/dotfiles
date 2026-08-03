@@ -7,3 +7,4 @@
 .config/github-copilot
 
 .claude/settings.local.json
+*.local

@@ -1,3 +1,4 @@
+[[ -f ${ZDOTDIR}/.zshenv.local ]] && source ${ZDOTDIR}/.zshenv.local
 export XDG_CACHE_HOME=${HOME}/.cache
 export XDG_STATE_HOME=${HOME}/.local/state
 export ZIM_HOME=${XDG_CACHE_HOME}/zim
