@@ -17,6 +17,15 @@
     "defaultMode": "plan"
   },
   "model": "opusplan",
+  "sandbox": {
+    "filesystem": {
+      "allowWrite": [
+        "/var/folders",
+        "~/.cache/mise",
+        "~/Library/Developer/Xcode/DerivedData"
+      ]
+    }
+  },
   "hooks": {
     "WorktreeCreate": [
       {
