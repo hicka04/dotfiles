@@ -10,7 +10,7 @@
         unstage = reset HEAD
         get = !ghq get
         sw = switch
-	delete-merged-branch = !git branch --merged | egrep -v '\\*|main|master' | xargs git branch -d
+	delete-merged-branch = !git for-each-ref --merged HEAD --format='%(refname:short) %(worktreepath)' refs/heads/ | awk 'NF == 1 { print $1 }' | grep -vxE 'main|master' | xargs -r -n1 git branch -D
 [core]
         autocrlf = input
         quotepath = false
