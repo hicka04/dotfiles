@@ -26,3 +26,4 @@
 [rebase]
         autostash = true
         abbreviateCommands = true
+        updateRefs = true
