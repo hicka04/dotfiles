@@ -11,6 +11,10 @@
         get = !ghq get
         sw = switch
 	delete-merged-branch = !git for-each-ref --merged HEAD --format='%(refname:short) %(worktreepath)' refs/heads/ | awk 'NF == 1 { print $1 }' | grep -vxE 'main|master' | xargs -r -n1 git branch -D
+[branch]
+        autoSetupMerge = always
+[remote]
+        pushDefault = origin
 [core]
         autocrlf = input
         quotepath = false
@@ -18,6 +22,7 @@
         defaultBranch = main
 [push]
 	autoSetupRemote = true
+        default = current
 [rebase]
         autostash = true
         abbreviateCommands = true
