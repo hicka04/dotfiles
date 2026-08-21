@@ -43,6 +43,6 @@
     "swift-lsp@claude-plugins-official": true
   },
   "language": "japanese",
-  "advisorModel": "opus",
+  "advisorModel": "fable",
   "tui": "fullscreen"
 }
