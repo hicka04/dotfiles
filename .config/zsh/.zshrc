@@ -148,6 +148,3 @@ bindkey "^g" ghq-fzf
 # chxcode
 source /opt/homebrew/opt/chxcode/share/chxcode/chxcode
 source /opt/homebrew/opt/chxcode/share/chxcode/auto
-
-# mise
-eval "$(~/.local/bin/mise activate zsh)"
