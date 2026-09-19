@@ -42,6 +42,15 @@ mkdir -p $(dirname $HISTFILE) && touch $HISTFILE
 brew bundle
 ```
 
+## Install mise
+```
+curl https://mise.run | sh
+```
+
+```
+mise install
+```
+
 ## Configure git
 ```
 git config --global user.name hicka04
