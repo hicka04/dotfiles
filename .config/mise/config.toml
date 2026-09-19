@@ -6,3 +6,10 @@ use_git_credentials = true
 
 [tools]
 node = "24"
+fd = "latest"
+fzf = "latest"
+gh = "latest"
+ghq = "latest"
+"git-lfs" = "latest"
+jq = "latest"
+xcodes = "latest"
