@@ -1,6 +1,4 @@
-tap "klaaspieter/formula"
 brew "aria2"
-brew "chxcode"
 brew "git"
 cask "1password"
 cask "arc"
