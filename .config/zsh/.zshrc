@@ -142,5 +142,3 @@ function ghq-fzf() {
 }
 zle -N ghq-fzf
 bindkey "^g" ghq-fzf
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
