@@ -13,3 +13,7 @@ ghq = "latest"
 "git-lfs" = "latest"
 jq = "latest"
 xcodes = "latest"
+
+[bootstrap.packages]
+"brew:aria2" = "latest"
+"brew:git" = "latest"
