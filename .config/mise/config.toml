@@ -14,6 +14,20 @@ ghq = "latest"
 jq = "latest"
 xcodes = "latest"
 
+[bootstrap.brew]
+adopt = true
+
 [bootstrap.packages]
 "brew:aria2" = "latest"
 "brew:git" = "latest"
+"brew-cask:1password" = "latest"
+"brew-cask:arc" = "latest"
+"brew-cask:chatgpt" = "latest"
+"brew-cask:ghostty" = "latest"
+"brew-cask:github-copilot-for-xcode" = "latest"
+"brew-cask:jetbrains-toolbox" = "latest"
+"brew-cask:proxyman" = "latest"
+"brew-cask:raycast" = "latest"
+"brew-cask:slack" = "latest"
+"brew-cask:visual-studio-code" = "latest"
+"brew-cask:vivaldi" = "latest"
