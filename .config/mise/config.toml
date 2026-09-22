@@ -32,4 +32,3 @@ adopt = true
 "brew-cask:slack" = "latest"
 "brew-cask:visual-studio-code" = "latest"
 "brew-cask:vivaldi" = "latest"
-"brew-cask:zoom" = "latest"
