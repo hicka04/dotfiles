@@ -1,10 +1,12 @@
 # dotfiles
-## Install Homebrew
-See https://brew.sh/
+## Install mise
+```
+curl https://mise.run | sh
+```
 
 ## Install ghq
 ```
-/opt/homebrew/bin/brew install ghq
+mise use -g ghq
 ```
 
 ## Clone
@@ -13,7 +15,7 @@ https://docs.github.com/ja/authentication/connecting-to-github-with-ssh
 
 ### Get
 ```
-/opt/homebrew/bin/ghq get git@github.com:hicka04/dotfiles.git
+ghq get git@github.com:hicka04/dotfiles.git
 ```
 
 ## Configure env
@@ -39,16 +41,8 @@ mkdir -p $(dirname $HISTFILE) && touch $HISTFILE
 
 ## Install commands and apps
 ```
-brew bundle
-```
-
-## Install mise
-```
-curl https://mise.run | sh
-```
-
-```
 mise install
+mise bootstrap packages apply
 ```
 
 ## Configure git
