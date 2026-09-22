@@ -24,7 +24,6 @@ adopt = true
 "brew-cask:arc" = "latest"
 "brew-cask:chatgpt" = "latest"
 "brew-cask:ghostty" = "latest"
-"brew-cask:github-copilot-for-xcode" = "latest"
 "brew-cask:jetbrains-toolbox" = "latest"
 "brew-cask:proxyman" = "latest"
 "brew-cask:raycast" = "latest"
