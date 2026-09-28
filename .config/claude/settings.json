@@ -14,9 +14,6 @@
       "Bash(wc:*)",
       "WebFetch(domain:raw.githubusercontent.com)"
     ],
-    "ask": [
-      "Bash(dangerouslyDisableSandbox:true)"
-    ],
     "defaultMode": "plan"
   },
   "model": "opusplan",
