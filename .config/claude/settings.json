@@ -41,5 +41,6 @@
   },
   "language": "japanese",
   "advisorModel": "fable",
-  "tui": "fullscreen"
+  "tui": "fullscreen",
+  "teammateMode": "tmux"
 }
