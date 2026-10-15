@@ -12,6 +12,7 @@ gh = "latest"
 ghq = "latest"
 "git-lfs" = "latest"
 jq = "latest"
+tmux = "latest"
 xcodes = "latest"
 
 [bootstrap.brew]
