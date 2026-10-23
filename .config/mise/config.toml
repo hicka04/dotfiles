@@ -24,6 +24,7 @@ adopt = true
 "brew-cask:1password" = "latest"
 "brew-cask:arc" = "latest"
 "brew-cask:chatgpt" = "latest"
+"brew-cask:cmux" = "latest"
 "brew-cask:ghostty" = "latest"
 "brew-cask:google-japanese-ime" = "latest"
 "brew-cask:jetbrains-toolbox" = "latest"
