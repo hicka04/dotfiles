@@ -42,5 +42,5 @@
   "language": "japanese",
   "advisorModel": "fable",
   "tui": "fullscreen",
-  "teammateMode": "tmux"
+  "teammateMode": "auto"
 }
